@@ -1,0 +1,13 @@
+version: "2"
+services:
+  pyload:
+    image: writl/pyload:latest
+    container_name: pyload
+    ports:
+      - 8000:8000
+    volumes:
+      - config:/opt/pyload/pyload-config
+      - ./data:/opt/pyload/Downloads
+
+volumes:
+  config:
